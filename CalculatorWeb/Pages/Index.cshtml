@@ -1,0 +1,39 @@
+@page
+@model CalculatorWeb.Pages.IndexModel
+@{
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h2>Interactive Calculator</h2>
+
+<form method="post">
+    <div>
+        <label>Operation</label>
+        <select name="Operation">
+            <option value="add">Add (+)</option>
+            <option value="sub">Subtract (-)</option>
+            <option value="mul">Multiply (*)</option>
+            <option value="div">Divide (/)</option>
+        </select>
+    </div>
+    <div>
+        <label>Operand A</label>
+        <input name="A" value="@Model.A" />
+    </div>
+    <div>
+        <label>Operand B</label>
+        <input name="B" value="@Model.B" />
+    </div>
+    <div>
+        <button type="submit">Compute</button>
+    </div>
+</form>
+
+@if (Model.ErrorMessage != null)
+{
+    <div style="color:red">@Model.ErrorMessage</div>
+}
+else if (Model.Result.HasValue)
+{
+    <div style="font-weight:bold">Result: @Model.Result.Value</div>
+}

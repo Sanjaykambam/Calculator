@@ -9,3 +9,11 @@ Features
 
 Notes
 - Target framework: net10.0
+
+Web UI (static)
+- A static web UI was added at CalculatorWeb/wwwroot/index.html which can run in any browser.
+- To open locally: open CalculatorWeb/wwwroot/index.html in a browser.
+- To serve via a simple static server from the repository root:
+  - Using Python: python -m http.server 8000 (then open http://localhost:8000/CalculatorWeb/wwwroot/)
+  - Using dotnet: dotnet tool install --global dotnet-serve; dotnet serve -d CalculatorWeb/wwwroot -p 5000
+

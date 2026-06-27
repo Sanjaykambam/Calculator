@@ -9,4 +9,3 @@ Features
 
 Notes
 - Target framework: net10.0
-- To add new operations, implement IOperation and register it in Program.cs or use DI/auto-registration.
